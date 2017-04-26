@@ -7,10 +7,13 @@ void setup() {
   pinMode(RELAY_PIN, OUTPUT);
   digitalWrite(RELAY_PIN, HIGH);
 
-  setTime(8, 28, 0, 24, 04, 17);
+  setTime(7, 00, 0, 24, 04, 17);
 
-  Alarm.alarmRepeat(8,30,0, activateWaterPump);
-  Alarm.alarmRepeat(8,40,0, deactivateWaterPump);
+  Alarm.alarmRepeat(7, 05, 0, activateWaterPump);
+  Alarm.alarmRepeat(7, 35, 0, deactivateWaterPump);
+
+  Alarm.alarmRepeat(17, 30, 0, activateWaterPump);
+  Alarm.alarmRepeat(18, 00, 0, deactivateWaterPump);
 }
 
 void loop() {
