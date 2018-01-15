@@ -2,9 +2,11 @@
 #include <TimeAlarms.h>
 
 #define RELAY_PIN 5
+#define LED_PIN 1
 
 void setup() {
   pinMode(RELAY_PIN, OUTPUT);
+  pinMode(LED_PIN, OUTPUT);
   digitalWrite(RELAY_PIN, HIGH);
 
   setTime(7, 00, 0, 24, 04, 17);
@@ -22,8 +24,10 @@ void loop() {
 
 void activateWaterPump() {
   digitalWrite(RELAY_PIN, LOW);
+  digitalWrite(LED_PIN, LOW);
 }
 
 void deactivateWaterPump() {
   digitalWrite(RELAY_PIN, HIGH);
+  digitalWrite(LED_PIN, HIGH);
 }
