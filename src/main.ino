@@ -9,13 +9,13 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   deactivateWaterPump();
 
-  setTime(7, 00, 0, 24, 04, 17);
+  setTime(18, 00, 0, 13, 10, 19); // Set time to October 13 2019 - 18:00:00
 
-  Alarm.alarmRepeat(7, 05, 0, activateWaterPump);
-  Alarm.alarmRepeat(7, 35, 0, deactivateWaterPump);
+  Alarm.alarmRepeat(5, 05, 0, activateWaterPump);
+  Alarm.alarmRepeat(5, 35, 0, deactivateWaterPump);
 
-  Alarm.alarmRepeat(17, 30, 0, activateWaterPump);
-  Alarm.alarmRepeat(18, 00, 0, deactivateWaterPump);
+  Alarm.alarmRepeat(18, 05, 0, activateWaterPump);
+  Alarm.alarmRepeat(18, 35, 0, deactivateWaterPump);
 }
 
 void loop() {
@@ -23,11 +23,11 @@ void loop() {
 }
 
 void activateWaterPump() {
-  digitalWrite(RELAY_PIN, LOW);
+  digitalWrite(RELAY_PIN, HIGH);
   digitalWrite(LED_PIN, HIGH);
 }
 
 void deactivateWaterPump() {
-  digitalWrite(RELAY_PIN, HIGH);
+  digitalWrite(RELAY_PIN, LOW);
   digitalWrite(LED_PIN, LOW);
 }

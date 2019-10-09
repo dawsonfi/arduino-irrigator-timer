@@ -33,3 +33,7 @@
 .gcc-flags.json
 
 .travis.yml
+
+.pio/
+.python-version
+.vscode/
